@@ -8,7 +8,7 @@ import * as fromProductsSelectors from '../../../../features/products/store/sele
   selector: 'app-default-layout',
   templateUrl: './default-layout.component.html',
   styleUrls: ['./default-layout.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DefaultLayoutComponent implements OnInit {
   public totalCountOfProducts$: Observable<number>;
@@ -16,7 +16,9 @@ export class DefaultLayoutComponent implements OnInit {
   constructor(private _router: Router, private _store: Store) {}
 
   ngOnInit(): void {
-    this.totalCountOfProducts$ = this._store.pipe(select(fromProductsSelectors.selectTotalOfProductsInCart));
+    this.totalCountOfProducts$ = this._store.pipe(
+      select(fromProductsSelectors.selectTotalOfProductsInCart)
+    );
   }
 
   public goToCart(): void {

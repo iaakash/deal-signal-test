@@ -4,15 +4,14 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'app-cart-item',
   templateUrl: './cart-item.component.html',
-  styleUrls: ['./cart-item.component.scss']
+  styleUrls: ['./cart-item.component.scss'],
 })
 export class CartItemComponent implements OnInit {
   @Input() product: IProduct;
   @Output() remove = new EventEmitter<number>();
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onRemoveItem(id: number) {
     this.remove.emit(id);

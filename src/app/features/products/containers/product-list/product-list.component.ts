@@ -9,24 +9,20 @@ import * as ProductsSelectors from '../../store/selectors';
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductListComponent implements OnInit {
-
   public products$: Observable<IProduct[]>;
-  constructor(
-    private _store: Store
-    ) { }
+  constructor(private _store: Store) {}
 
   ngOnInit(): void {
     this._store.dispatch(ProductsActions.getProducts());
-    this.products$ = this._store.pipe(select(ProductsSelectors.selectProductList));
+    this.products$ = this._store.pipe(
+      select(ProductsSelectors.selectProductList)
+    );
   }
-
 
   public addToCart(id: number) {
-
-    this._store.dispatch(ProductsActions.addProductToCart({id}));
+    this._store.dispatch(ProductsActions.addProductToCart({ id }));
   }
-
 }

@@ -9,7 +9,7 @@ import * as fromProductsActions from '../../../products/store/actions';
   selector: 'app-listing',
   templateUrl: './listing.component.html',
   styleUrls: ['./listing.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ListingComponent implements OnInit {
   public productsInCart$: Observable<IProduct[]>;
@@ -25,9 +25,7 @@ export class ListingComponent implements OnInit {
     );
   }
 
-
-
-  public removeFromCart(id: number){
+  public removeFromCart(id: number) {
     this._store.dispatch(fromProductsActions.removeProductFromCart({ id }));
   }
 }

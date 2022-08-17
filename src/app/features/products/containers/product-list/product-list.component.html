@@ -1,3 +1,7 @@
 <ul>
-  <app-product-card [product]="product" *ngFor="let product of products$ | async"  (add)="addToCart($event)"></app-product-card>
+  <app-product-card
+    [product]="product"
+    *ngFor="let product of products$ | async"
+    (add)="addToCart($event)"
+  ></app-product-card>
 </ul>

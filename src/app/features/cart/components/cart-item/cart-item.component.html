@@ -1,13 +1,15 @@
 <div class="row">
   <div class="product-image">
-    <img [src]="product.image" alt="">
+    <img [src]="product.image" alt="" />
   </div>
   <div class="desc_box">
-    <h4>{{product.title}}</h4>
-    <span class="quant">Qty:<strong>{{product.quantity}}</strong></span>
+    <h4>{{ product.title }}</h4>
+    <span class="quant"
+      >Qty:<strong>{{ product.quantity }}</strong></span
+    >
   </div>
   <div class="amount">
-    <span class="price">{{(product.price * product.quantity) | currency}}</span>
+    <span class="price">{{ product.price * product.quantity | currency }}</span>
     <span class="deleteItem" (click)="onRemoveItem(product.id)">Remove</span>
   </div>
 </div>
