@@ -1,0 +1,66 @@
+:host {
+  .brand {
+    align-self: center;
+  }
+  .cartBlock {
+    position: relative;
+  }
+  .content_area {
+    position: relative;
+    top: 5rem;
+    max-width: 102rem;
+    margin: 0 auto;
+  }
+  .countBubble{
+    position: absolute;
+    background: #ff5722;
+    width: 15px;
+    height: 15px;
+    top: -20px;
+    left: 13px;
+    color: white;
+    font-size: 0.65rem;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header {
+    box-shadow: 0 0 10px #0000001a;
+      background: white;
+    z-index: 9999;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      ul {
+        display: flex;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      margin: 0;
+      align-items: center;
+        li {
+          list-style-type: none;
+          font-weight: 100;
+          &.brand {
+
+            font-size: 2rem;
+          }
+          cursor: pointer;
+          &:hover {
+            color: tomato;
+          }
+        }
+
+      }
+  }
+
+  .content_area {
+    position: relative;
+    top:5rem;
+  }
+
+}
+

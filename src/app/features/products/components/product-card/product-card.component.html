@@ -1,0 +1,15 @@
+<div class="card">
+  <img [src]="product.image" alt="">
+  <h3>{{product.title}}</h3>
+  <div class="desc_slab">
+    <p>{{product.price | currency}}</p>
+    <p class="rating">{{product.rating.rate}}({{product.rating.count}})</p>
+  </div>
+
+  <footer>
+
+    <button (click)="addToCart(product.id)">Add to Cart</button>
+    <!-- <button *ngIf="product.addedToCart" (click)="removeFromCart(product.id)">Remove from Cart</button> -->
+  </footer>
+
+</div>
